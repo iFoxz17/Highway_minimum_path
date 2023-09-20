@@ -47,7 +47,7 @@ Five commands avaibles:
 It is possible to generate <code>HTML</code> documentation for the class through the **doxygen tool**. To do so, just install <code>doxygen</code>, open the terminal in the project folder, and run the <code>doxygen</code> command. It will automatically search for the Doxyfile which is in the folder and create a new folder containing the newly generated documentation. To read it, just go into the folder and open <code>index.html</code> with your preferred browser.
 
 ## Tests
-**Several tests** with relative expected **outputs** are avaible in the directory <code>test</code> as zip files; They can be run individually (using the Linux <code>diff</code> tool for checking outputs, for example) or all together; for this last option:
+**Several tests** with relative expected **outputs** are avaible in the directory <code>test</code> as zip files; they can be run individually (using the Linux <code>diff</code> tool for checking outputs, for example) or all together; for this last option:
  - **Compile** the file <code>run_tests.c</code> with <code>gcc run_tests.c -o run_tests</code>;
  - **Extract** all the tests from compressed archive into the directory <code>test</code>;
  - **Run** the executable </code>run_tests</code> (<code>./run_tests</code>).
