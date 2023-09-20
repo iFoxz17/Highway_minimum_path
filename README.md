@@ -48,9 +48,9 @@ It is possible to generate <code>HTML</code> documentation for the class through
 
 ## Tests
 **Several tests** with relative expected **outputs** are avaible in the directory <code>test</code> as zip files; They can be run individually (using the Linux <code>diff</code> tool for checking outputs, for example) or all together; for this last option:
- - **Compile** the file <code>run_test.c</code> with <code>gcc run_test.c -o run_test</code>;
+ - **Compile** the file <code>run_tests.c</code> with <code>gcc run_tests.c -o run_tests</code>;
  - **Extract** all the tests from compressed archive into the directory <code>test</code>;
- - **Run** the executable </code>tun_test</code> (<code>./run_test</code>).
+ - **Run** the executable </code>run_tests</code> (<code>./run_tests</code>).
 
 ## Notes
 For severals instances can be avaible **multiple optimal solutions**; as default is selected the solution which **minimizes** the **distances from** the **start** of the **highway** (both for **forward** or **backward route**), according to tests. This can be modified at **compile time** to **upgrade perfomances** (see module <code>solver</code> in the **documentation** for more details).
