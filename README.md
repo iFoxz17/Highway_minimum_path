@@ -6,8 +6,8 @@ Consider an **highway** containing several **stations**; each station stands at 
 
 Formally, given:
  - A **set of stations** $S=$ \{ $s_1, s_2, ..., s_n$\};
- - A function $d : S \rightarrow \mathbb{N}$, that associates at every station his **distance**;
- - A function $c : S \rightarrow \mathbb{N}$, that associates at every station the car with the **max fuel**;
+ - A **function** $d : S \rightarrow \mathbb{N}$, that associates at every station his **distance**;
+ - A **function** $c : S \rightarrow \mathbb{N}$, that associates at every station the car with the **max fuel**;
 
 Find
  - $k \in N$, the **minimum number of stops** that allows to reach $s_n$ from $s_1$,
@@ -38,12 +38,19 @@ Five commands avaibles:
      - If the **route does not exist**: <code>nessun-percorso</code>
 
 ## Usage
-- Compile with the <code>make</code> tool
-- Receive commands from <code>stdin</code>
-- Outputs results on <code>stdout</code>
-- Example using Bash: <code>cat \_commands_path\_ | ./main</code>
+- **Compile** with the <code>make</code> tool
+- **Receive** commands from <code>stdin</code>
+- **Outputs** results on <code>stdout</code>
+- Example using **BASH**: <code>cat \_commands_path\_ | ./main</code>
 
 ## Documentation
 It is possible to generate <code>HTML</code> documentation for the class through the **doxygen tool**. To do so, just install <code>doxygen</code>, open the terminal in the project folder, and run the <code>doxygen</code> command. It will automatically search for the Doxyfile which is in the folder and create a new folder containing the newly generated documentation. To read it, just go into the folder and open <code>index.html</code> with your preferred browser.
 
-## Test
+## Tests
+**Several tests** with relative expected **outputs** are avaible in the directory <code>test</code> as zip files; They can be run individually (using the Linux <code>diff</code> tool for checking outputs, for example) or all together; for this last option:
+ - **Compile** the file <code>run_test.c</code> with <code>gcc run_test.c -o run_test</code>;
+ - **Extract** all the tests from compressed archive into the directory <code>test</code>;
+ - **Run** the executable </code>tun_test</code> (<code>./run_test</code>).
+
+## Notes
+For severals instances can be avaible **multiple optimal solutions**; as default is selected the solution which **minimizes** the **distances from** the **start** of the **highway** (both for **forward** or **backward route**), according to tests. This can be modified at **compile time** to **upgrade perfomances** (see module <code>solver</code> in the **documentation** for more details).
