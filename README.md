@@ -1,4 +1,4 @@
-# Linear_minPath
+# Highway_minimum_path
 **C project** to solve a linear variant of the **minimum path problem**.
 
 ## Description
